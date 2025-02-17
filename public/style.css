@@ -277,7 +277,7 @@ svg path {
 }
 .page-footer .container::before {
   content: "";
-  background: url("/images/riogif.gif") no-repeat center/cover;
+  background: url("../images/riogif.gif") no-repeat center/cover;
   width: 100px;
   height: 100px;
   display: block;
