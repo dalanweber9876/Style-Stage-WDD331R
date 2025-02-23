@@ -358,4 +358,118 @@ svg path {
   100% {
     background-position: 0% 50%;
   }
+}
+.profile {
+  text-align: center;
+  position: relative;
+}
+.profile h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.profile .container {
+  background-color: #09361c;
+  padding: 1.5rem 3rem;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  color: white;
+  width: 60%;
+  margin: 0 auto;
+}
+.profile ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+}
+.profile li {
+  flex: 1;
+  padding: 0.5rem;
+}
+.profile .profile-title,
+.profile .profile-twitter {
+  text-align: left;
+  flex-basis: 45%;
+  padding-left: 1rem;
+}
+.profile .profile-author,
+.profile .profile-website {
+  text-align: left;
+  flex-basis: 50%;
+  border-left: 2px solid white;
+  padding-left: 2rem;
+}
+.profile .view-stylesheet {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  text-align: center;
+}
+.profile a {
+  color: #a3e635;
+  text-decoration: none;
+  font-weight: bold;
+}
+.profile a:hover {
+  text-decoration: underline;
+}
+
+#styles {
+  text-align: center;
+  padding: 3rem 0;
+}
+#styles h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+#styles .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#styles .features {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+#styles .features li {
+  background-color: #09361c;
+  color: white;
+  width: 200px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem;
+}
+#styles .features li span {
+  display: block;
+}
+
+.features li a {
+  color: #a3e635;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.features li a:hover {
+  text-decoration: underline;
 }/*# sourceMappingURL=style.css.map */
