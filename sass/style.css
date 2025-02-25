@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
 }
@@ -249,7 +250,7 @@ section.elements .element.accent3 h4 {
 svg {
   width: 50px;
   height: 50px;
-  display: block;
+  display: none; /* Hides the star */
   margin: auto;
 }
 
@@ -259,4 +260,216 @@ svg path {
   stroke-width: 2px;
   transform: scale(0.4);
   transform-origin: center;
+}
+
+.page-footer {
+  background: #06677d;
+  color: white;
+  padding: 2rem;
+}
+.page-footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+  position: relative;
+}
+.page-footer .container::before {
+  content: "";
+  background: url(../images/riogif.gif) no-repeat center/cover;
+  width: 100px;
+  height: 100px;
+  display: block;
+  flex-shrink: 0;
+}
+.page-footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+.page-footer ul::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(100% + 2rem);
+  width: 2px;
+  background: white;
+}
+.page-footer li {
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.page-footer li:hover {
+  background: linear-gradient(45deg, green, yellow, blue, white);
+  background-size: 400% 400%;
+  animation: rainbow-background 2s linear infinite;
+  color: white;
+}
+.page-footer li::before {
+  content: "•";
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+.page-footer li:hover::before {
+  color: gold;
+}
+.page-footer .text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-end;
+  text-align: right;
+  flex: 1;
+  min-width: 0;
+  margin-left: 2rem;
+  order: 2;
+}
+.page-footer .created-by {
+  align-self: flex-end;
+  font-size: 0.8rem;
+  font-weight: bold;
+  order: 1;
+  margin-left: auto;
+}
+.page-footer p, .page-footer a, .page-footer li {
+  color: white !important;
+  font-size: 0.7rem !important;
+  line-height: 1.2;
+}
+.page-footer p {
+  margin: 0;
+}
+
+@keyframes rainbow-background {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.profile {
+  text-align: center;
+  position: relative;
+}
+.profile h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.profile .container {
+  background-color: #09361c;
+  padding: 1.5rem 3rem;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  color: white;
+  width: 60%;
+  margin: 0 auto;
+}
+.profile ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+}
+.profile li {
+  flex: 1;
+  padding: 0.5rem;
+}
+.profile .profile-title,
+.profile .profile-twitter {
+  text-align: left;
+  flex-basis: 45%;
+  padding-left: 1rem;
+}
+.profile .profile-author,
+.profile .profile-website {
+  text-align: left;
+  flex-basis: 50%;
+  border-left: 2px solid white;
+  padding-left: 2rem;
+}
+.profile .view-stylesheet {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  text-align: center;
+}
+.profile a {
+  color: #a3e635;
+  text-decoration: none;
+  font-weight: bold;
+}
+.profile a:hover {
+  text-decoration: underline;
+}
+
+#styles {
+  text-align: center;
+  padding: 3rem 0;
+}
+#styles h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+#styles .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#styles .features {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+#styles .features li {
+  background-color: #09361c;
+  color: white;
+  width: 200px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem;
+}
+#styles .features li span {
+  display: block;
+}
+
+.features li a {
+  color: #a3e635;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.features li a:hover {
+  text-decoration: underline;
 }/*# sourceMappingURL=style.css.map */

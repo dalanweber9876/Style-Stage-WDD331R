@@ -318,11 +318,11 @@ section {
   }
 }
 
-// Star SVG Styling- this is the star provided in the index. should we just hide it?
+// Star SVG Styling- this is the star provided in the index. I hid it
 svg {
   width: 50px;
   height: 50px;
-  display: block;
+  display: none; /* Hides the star */
   margin: auto;
 }
 
@@ -333,3 +333,244 @@ svg path {
   transform: scale(0.4);
   transform-origin: center;
 }
+
+//footer
+.page-footer {
+  background: $color-accent1;
+  color: white;
+  padding: 2rem;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;  // Space out content between left and right side
+    gap: 2rem;
+    width: 100%; // Ensure full width
+    position: relative;
+  }
+
+  .container::before { // GIF 
+    content: "";
+    background: url(../images/riogif.gif) no-repeat center/cover;
+    width: 100px;
+    height: 100px;
+    display: block;
+    flex-shrink: 0; // Prevent the image from shrinking if container shrinks
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 0;
+    padding-left: 1.5rem;
+    position: relative;
+
+    &::after { // Vertical Line
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: calc(100% + 2rem); // Position to the right of the ul
+      width: 2px;
+      background: white;
+    }
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+    &:hover {
+      background: linear-gradient(45deg, green, yellow, blue, white);
+      background-size: 400% 400%;
+      animation: rainbow-background 2s linear infinite;
+      color: white;
+    }
+
+    &::before {
+      content: "•";
+      margin-right: 0.5rem;
+      font-size: 1rem;
+      color: white;
+      transition: color 0.3s ease-in-out;
+    }
+
+    &:hover::before {
+      color: gold;
+    }
+  }
+
+  .text-content { // Right Section: Text Content
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-end;
+    text-align: right;
+    flex: 1;
+    min-width: 0;  // Prevent overflow
+    margin-left: 2rem;
+    order: 2;  // Position text-content after the social links and image (optional)
+  }
+
+  // Position "Created and maintained by Stephanie Eckles" to the right side after the vertical line
+  .created-by {
+    align-self: flex-end; // Align to the right side
+    font-size: 0.8rem;  // Slightly larger for distinction
+    font-weight: bold;  // Optional: make it stand out
+    order: 1;  // Ensure it's placed before the social media links
+    margin-left: auto; // Push it to the right
+  }
+
+  // Apply styles to all text elements inside the footer
+  p, a, li {
+    color: white !important;  // Enforce white color
+    font-size: 0.7rem !important;  // Make all text very small
+    line-height: 1.2;  // Optional: adjust line height for better readability
+  }
+
+  p { // Make sure the paragraphs are properly aligned
+    margin: 0;
+  }
+}
+
+// Brazilian colors animation
+@keyframes rainbow-background {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+//currently stage style section
+.profile {
+  text-align: center;
+  position: relative;
+
+  h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .container {
+    background-color: #09361c;
+    padding: 1.5rem 3rem; // Adds space on the sides
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    color: white;
+    width: 60%; // Centers the container
+    margin: 0 auto;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+  }
+
+  li {
+    flex: 1;
+    padding: 0.5rem;
+  }
+
+  .profile-title,
+  .profile-twitter {
+    text-align: left;
+    flex-basis: 45%; // Moves these elements slightly to the right
+    padding-left: 1rem; // Fine-tunes spacing
+  }
+
+  .profile-author,
+  .profile-website {
+    text-align: left;
+    flex-basis: 50%;
+    border-left: 2px solid white;
+    padding-left: 2rem; // Increases spacing from the vertical line
+  }
+
+  // Centers "View Stylesheet"
+  .view-stylesheet {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  a {
+    color: #a3e635;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+//three equal sized squares
+#styles {
+  text-align: center;
+  padding: 3rem 0; // Adds more room on top and bottom
+
+  h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 2rem; // More space between title and squares
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .features {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+
+  .features li {
+    background-color: #09361c; // Green background
+    color: white;
+    width: 200px; // Fixed equal size
+    height: 120px; // Adjust as needed
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .features li span {
+    display: block;
+  }
+}
+.features li a {
+  color: #a3e635; // Light green for the links
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.features li a:hover {
+  text-decoration: underline;
+}
+
+
