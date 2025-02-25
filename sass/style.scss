@@ -1,6 +1,23 @@
+// Import partial files
+@import "Global CSS/theme";
+@import "Global CSS/reset";
+@import "Global CSS/typography";
+@import "Global CSS/fonts";
+@import "Composition Related Styles/layout";
+@import "Block Related Styles/header";
+@import "Block Related Styles/nav";
+@import "Block Related Styles/about";
+@import "Block Related Styles/guidelines";
+@import "Block Related Styles/contribute";
+@import "Block Related Styles/files";
+@import "Block Related Styles/styles";
+@import "Block Related Styles/profile";
+@import "Block Related Styles/footer";
+@import "Utility Styles/links";
+
 // Fonts and Colors
-$font-body: 'Lato', sans-serif;
-$font-headlines: 'Satisfy', cursive;
+$font-body: "Lato", sans-serif;
+$font-headlines: "Satisfy", cursive;
 $color-accent1: #06677d;
 $color-accent2: #a5cff8;
 $color-accent3: #c4631e;
@@ -19,7 +36,7 @@ html {
 }
 
 body {
-  font-family: $font-body, !important;
+  font-family: $font-body !important;
   font-size: 85%;
   color: $color-text-dark;
   margin: 0;
@@ -62,7 +79,7 @@ nav {
 
       // Underline effect (border) during hover
       &:before {
-        content: '';
+        content: "";
         position: absolute;
         bottom: 0;
         left: 0;
@@ -76,7 +93,13 @@ nav {
 
       // Rainbow background effect on hover
       &:hover {
-        background: linear-gradient(45deg, green, yellow, blue, white); /* Brazilian flag colors */
+        background: linear-gradient(
+          45deg,
+          green,
+          yellow,
+          blue,
+          white
+        ); /* Brazilian flag colors */
         background-size: 400% 400%;
         animation: rainbow-background 2s linear infinite; /* Continuous rainbow background */
         color: lighten($color-accent2, 10%); // Text color change on hover
@@ -92,14 +115,20 @@ nav {
 }
 
 @keyframes rainbow-background {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 // Centering the h1 with the new border effect
 h1 {
-  font-family: $font-headlines, !important;
+  font-family: $font-headlines !important;
   background: $color-accent1;
   color: white;
   font-weight: normal;
@@ -125,21 +154,33 @@ h1::before {
   bottom: -15px;
   border-radius: 30px;
   border: 15px solid transparent;
-  background: linear-gradient(45deg, green, yellow, blue, white); /* Brazilian flag colors */
+  background: linear-gradient(
+    45deg,
+    green,
+    yellow,
+    blue,
+    white
+  ); /* Brazilian flag colors */
   background-size: 400% 400%;
   z-index: -1;
   animation: rainbow-border 2s linear infinite;
 }
 
 @keyframes rainbow-border {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 // Headings
 h2 {
-  font-family: $font-headlines, !important;
+  font-family: $font-headlines !important;
   color: #123700;
   font-weight: 900;
   font-size: 4em;
@@ -149,7 +190,7 @@ h2 {
 
 h3,
 h4 {
-  font-family: $font-headlines, !important;
+  font-family: $font-headlines !important;
   font-weight: 200;
   letter-spacing: 1px;
   line-height: 1em;

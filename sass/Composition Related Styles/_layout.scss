@@ -1,0 +1,22 @@
+#main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  > .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .container,
+  #about {
+    grid-column: 1/3;
+  }
+
+  .container .container:last-child {
+    grid-column: 1/2;
+  }
+}
+
+#about .container:last-child {
+  grid-column: 1/2;
+}
