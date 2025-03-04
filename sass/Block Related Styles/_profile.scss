@@ -1,0 +1,72 @@
+.profile {
+  text-align: center;
+  position: relative;
+
+  h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .container {
+    background-color: #09361c;
+    padding: 1.5rem 3rem; // Adds space on the sides
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    color: white;
+    width: 60%; // Centers the container
+    margin: 0 auto;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+  }
+
+  li {
+    flex: 1;
+    padding: 0.5rem;
+  }
+
+  .profile-title,
+  .profile-twitter {
+    text-align: left;
+    flex-basis: 45%; // Moves these elements slightly to the right
+    padding-left: 1rem; // Fine-tunes spacing
+  }
+
+  .profile-author,
+  .profile-website {
+    text-align: left;
+    flex-basis: 50%;
+    border-left: 2px solid white;
+    padding-left: 2rem; // Increases spacing from the vertical line
+  }
+
+  // Centers "View Stylesheet"
+  .view-stylesheet {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  a {
+    color: #a3e635;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}

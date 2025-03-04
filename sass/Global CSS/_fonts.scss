@@ -4,14 +4,18 @@
 // Dancing Script
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
 
+// Fonts
+$font-body: "Lato", sans-serif;
+$font-headlines: "Satisfy", cursive;
+
 h1,
 h2,
 h3,
 h3 {
-  font-family: $header-font;
+  font-family: $font-headlines;
 }
 
 p,
 li {
-  font-family: $body-font;
+  font-family: $font-body;
 }

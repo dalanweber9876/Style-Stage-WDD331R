@@ -1,0 +1,10 @@
+a {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  color: $color-text-dark;
+  text-decoration: none;
+  transition: border-color 0.2s ease-in-out;
+
+  &:hover {
+    border-color: lighten($color-accent1, 10%);
+  }
+}

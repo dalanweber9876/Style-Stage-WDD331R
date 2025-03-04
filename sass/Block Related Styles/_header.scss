@@ -1,0 +1,63 @@
+@keyframes rainbow-background {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+// Centering the h1 with the new border effect
+h1 {
+  font-family: $font-headlines !important;
+  background: $color-accent1;
+  color: white;
+  font-weight: normal;
+  font-size: 6em;
+  padding: 0.5em 1em;
+  margin: 1em auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  position: relative;
+  border-radius: 25px;
+  transition: border 0.3s ease-in-out;
+}
+
+h1::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
+  border-radius: 30px;
+  border: 15px solid transparent;
+  background: linear-gradient(
+    45deg,
+    green,
+    yellow,
+    blue,
+    white
+  ); /* Brazilian flag colors */
+  background-size: 400% 400%;
+  z-index: -1;
+  animation: rainbow-border 2s linear infinite;
+}
+
+@keyframes rainbow-border {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
