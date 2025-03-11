@@ -76,7 +76,7 @@ li {
 }
 
 html {
-  background: url(../images/rioj.jpg) no-repeat center center fixed;
+  background: url(../public/images/rioj.jpg) no-repeat center center fixed;
   background-size: cover;
   padding: 5%;
   border: 10px solid #06677d;
@@ -484,7 +484,7 @@ nav li a:hover:before {
 }
 .page-footer .container::before {
   content: "";
-  background: url(../images/riogif.gif) no-repeat center/cover;
+  background: url(../public/images/riogif.gif) no-repeat center/cover;
   width: 100px;
   height: 100px;
   display: block;
