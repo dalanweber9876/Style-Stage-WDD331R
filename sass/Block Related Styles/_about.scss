@@ -8,3 +8,34 @@
   background-size: cover;
   opacity: 10%;
 }
+
+// #about {
+//   @media (max-width: 600px) {
+//     display: flex;
+//     width: 100%;
+//   }
+//   .container:first-child {
+//     @media (max-width: 600px) {
+//       margin: 0px;
+//       padding: 0px;
+//       grid-column: 1/3;
+//       // font-size: 10px;
+//     }
+
+//     h2 {
+//       @media (max-width: 600px) {
+//         font-size: 2.5em;
+//       }
+//     }
+
+//     p {
+//       @media (max-width: 600px) {
+//         font-size: 1em;
+//       }
+//     }
+//   }
+// }
+
+// #main .container {
+//   font-size: 12px;
+// }
