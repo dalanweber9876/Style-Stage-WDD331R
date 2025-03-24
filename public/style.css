@@ -91,7 +91,8 @@ body {
   background: rgba(255, 255, 255, 0.8);
   border-radius: 15px;
   z-index: 1;
-  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
 }
 
 #main {
@@ -272,6 +273,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: -moz-fit-content;
   width: fit-content;
   position: relative;
   border-radius: 25px;
@@ -293,8 +295,7 @@ h1::before {
   bottom: -15px;
   border-radius: 30px;
   border: 15px solid transparent;
-  background: linear-gradient(45deg, green, yellow, blue, white);
-  /* Brazilian flag colors */
+  background: linear-gradient(45deg, green, yellow, blue, white); /* Brazilian flag colors */
   background-size: 400% 400%;
   z-index: -1;
   animation: rainbow-border 2s linear infinite;
@@ -380,11 +381,9 @@ nav li a:before {
   transition: transform 0.3s ease;
 }
 nav li a:hover {
-  background: linear-gradient(45deg, green, yellow, blue, white);
-  /* Brazilian flag colors */
+  background: linear-gradient(45deg, green, yellow, blue, white); /* Brazilian flag colors */
   background-size: 400% 400%;
-  animation: rainbow-background 2s linear infinite;
-  /* Continuous rainbow background */
+  animation: rainbow-background 2s linear infinite; /* Continuous rainbow background */
   color: #d4e8fc;
 }
 nav li a:hover:before {
@@ -458,6 +457,41 @@ nav li a:hover:before {
   text-decoration: underline;
 }
 
+@media screen and (max-width: 600px) {
+  #styles .features {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  #styles .features li {
+    width: 90%;
+    max-width: 250px;
+    height: auto;
+    padding: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 1.5rem;
+  }
+  #styles .features li span {
+    display: block;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+  #styles .features li a {
+    color: #a3e635;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-overflow: ellipsis;
+  }
+  #styles .features li a:hover {
+    text-decoration: underline;
+  }
+}
 .profile {
   text-align: center;
   position: relative;
@@ -622,8 +656,7 @@ a:hover {
 svg {
   width: 50px;
   height: 50px;
-  display: none;
-  /* Hides the star */
+  display: none; /* Hides the star */
   margin: auto;
 }
 
@@ -633,4 +666,4 @@ svg path {
   stroke-width: 2px;
   transform: scale(0.4);
   transform-origin: center;
-}
+}/*# sourceMappingURL=style.css.map */

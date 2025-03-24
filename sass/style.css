@@ -76,7 +76,7 @@ li {
 }
 
 html {
-  background: url(../public/images/rioj.jpg) no-repeat center center fixed;
+  background: url(../images/rioj.jpg) no-repeat center center fixed;
   background-size: cover;
   padding: 5%;
   border: 10px solid #06677d;
@@ -266,6 +266,12 @@ h1 {
   border-radius: 25px;
   transition: border 0.3s ease-in-out;
 }
+@media (max-width: 600px) {
+  h1 {
+    margin: 40px auto;
+    font-size: 2em;
+  }
+}
 
 h1::before {
   content: "";
@@ -293,11 +299,27 @@ h1::before {
     background-position: 0% 50%;
   }
 }
+@media (max-width: 600px) {
+  header .container h2 {
+    font-size: 2.5em;
+  }
+}
+@media (max-width: 600px) {
+  header .container p {
+    font-size: 1em;
+  }
+}
+
 nav {
   background-color: #06677d;
   padding: 1em 2em;
   margin-top: 120px;
   z-index: 10;
+}
+@media (max-width: 600px) {
+  nav {
+    margin: 40px auto;
+  }
 }
 nav ul {
   list-style: none;
@@ -306,9 +328,21 @@ nav ul {
   display: flex;
   justify-content: center;
 }
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+}
 nav li {
   margin: 0 1.5em;
   position: relative;
+}
+@media (max-width: 600px) {
+  nav li {
+    margin: 20px 0px;
+    font-size: 0.9em;
+  }
 }
 nav li a {
   font-family: "Satisfy", cursive;
@@ -405,6 +439,41 @@ nav li a:hover:before {
   text-decoration: underline;
 }
 
+@media screen and (max-width: 600px) {
+  #styles .features {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  #styles .features li {
+    width: 90%;
+    max-width: 250px;
+    height: auto;
+    padding: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 1.5rem;
+  }
+  #styles .features li span {
+    display: block;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+  #styles .features li a {
+    color: #a3e635;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-overflow: ellipsis;
+  }
+  #styles .features li a:hover {
+    text-decoration: underline;
+  }
+}
 .profile {
   text-align: center;
   position: relative;
