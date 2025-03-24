@@ -23,6 +23,10 @@
     margin: 0;
     margin-bottom: 2rem;
 
+    @media (max-width: 600px) {
+      flex-direction: column;
+    }
+
     li {
       background-color: #09361c; // Green background
       color: white;
