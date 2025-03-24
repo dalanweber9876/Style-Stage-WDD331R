@@ -61,27 +61,27 @@
 @media screen and (max-width: 600px) {
   #styles {
     .features {
-      flex-direction: column; 
-      align-items: center; 
-      gap: 1rem; 
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
 
       li {
-        width: 90%; 
-        max-width: 250px; 
-        height: auto; 
-        padding: 1rem; 
-        font-size: 0.9rem; 
-        line-height: 1.4; 
+        width: 90%;
+        max-width: 250px;
+        height: auto;
+        padding: 1rem;
+        font-size: 0.9rem;
+        line-height: 1.4;
 
-        display: flex; 
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
 
         span {
           display: block;
-          white-space: normal; 
-          word-wrap: break-word; 
+          white-space: normal;
+          word-wrap: break-word;
         }
 
         a {
@@ -89,7 +89,7 @@
           text-decoration: none;
           font-weight: bold;
           font-size: 0.9rem;
-          text-overflow: ellipsis; 
+          text-overflow: ellipsis;
 
           &:hover {
             text-decoration: underline;
@@ -97,8 +97,8 @@
         }
 
         // Increase padding to make the green background fit the text better
-        padding-right: 1.5rem;     }
+        padding-right: 1.5rem;
+      }
     }
   }
 }
-
