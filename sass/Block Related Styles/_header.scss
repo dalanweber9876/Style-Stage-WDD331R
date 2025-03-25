@@ -1,3 +1,6 @@
+@use "../Global CSS/theme" as theme;
+@use "../Global CSS/fonts" as fonts;
+
 @keyframes rainbow-background {
   0% {
     background-position: 0% 50%;
@@ -12,9 +15,10 @@
 
 // Centering the h1 with the new border effect
 h1 {
-  font-family: $font-headlines !important;
-  background: $color-accent1;
-  color: white;
+  font-family: fonts.$font-headlines !important;
+  background: theme.$color-accent1;
+  text-transform: uppercase;
+  color: theme.$color-accent3;
   font-weight: normal;
   font-size: 6em;
   padding: 0.5em 1em;
@@ -45,11 +49,10 @@ h1::before {
   border: 15px solid transparent;
   background: linear-gradient(
     45deg,
-    green,
-    yellow,
-    blue,
-    white
-  ); /* Brazilian flag colors */
+    theme.$color-accent2,
+    theme.$color-accent3,
+    theme.$color-accent4
+  ); 
   background-size: 400% 400%;
   z-index: -1;
   animation: rainbow-border 2s linear infinite;

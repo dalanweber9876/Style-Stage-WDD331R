@@ -1,3 +1,5 @@
+@use "../Global CSS/theme" as theme;
+
 .profile {
   text-align: center;
   position: relative;
@@ -9,13 +11,13 @@
   }
 
   .container {
-    background-color: #09361c;
+    background-color: theme.$color-text-dark;
     padding: 1.5rem 3rem; // Adds space on the sides
     border-radius: 8px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    color: white;
+    color: theme.$color-accent3;
     width: 60%; // Centers the container
     margin: 0 auto;
   }
@@ -46,7 +48,7 @@
   .profile-website {
     text-align: left;
     flex-basis: 50%;
-    border-left: 2px solid white;
+    border-left: 2px solid theme.$color-accent3;
     padding-left: 2rem; // Increases spacing from the vertical line
   }
 
@@ -61,7 +63,7 @@
   }
 
   a {
-    color: #a3e635;
+    color: theme.$color-accent4;
     text-decoration: none;
     font-weight: bold;
   }

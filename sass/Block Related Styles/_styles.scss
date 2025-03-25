@@ -1,3 +1,5 @@
+@use "../Global CSS/theme" as theme;
+
 #styles {
   text-align: center;
   padding: 3rem 0; // Adds more room on top and bottom
@@ -28,8 +30,8 @@
     }
 
     li {
-      background-color: #09361c; // Green background
-      color: white;
+      background-color: theme.$color-text-dark;
+      color: theme.$color-accent3;
       width: 200px; // Fixed equal size
       height: 120px; // Adjust as needed
       display: flex;
@@ -47,7 +49,7 @@
       }
 
       a {
-        color: #a3e635; // Light green for the links
+        color: theme.$color-accent4;
         text-decoration: none;
         font-weight: bold;
 
@@ -85,7 +87,7 @@
         }
 
         a {
-          color: #a3e635;
+          color: theme.$color-accent4;
           text-decoration: none;
           font-weight: bold;
           font-size: 0.9rem;

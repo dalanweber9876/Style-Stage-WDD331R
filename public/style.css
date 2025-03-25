@@ -1,11 +1,10 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 /*
  * [Modified] Modern CSS Reset
  * @link https://github.com/hankchizljaw/modern-css-reset
 */
 /* Box sizing rules */
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
 *,
 *::before,
 *::after {
@@ -59,16 +58,21 @@ select {
     scroll-behavior: auto !important;
   }
 }
+@font-face {
+  font-family: Sunflare;
+  src: url("fonts/Sunflare.ttf") format("truetype");
+  src: url("fonts/Sunflare.otf") format("opentype");
+  src: url("fonts/Sunflare.woff") format("woff");
+}
 h1,
 h2,
-h3,
 h3 {
-  font-family: "Satisfy", cursive;
+  font-family: "Sunflare", sans-serif;
 }
 
 p,
 li {
-  font-family: "Lato", sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 * {
@@ -83,9 +87,9 @@ html {
 }
 
 body {
-  font-family: "Lato", sans-serif !important;
+  font-family: "Quicksand", sans-serif !important;
   font-size: 85%;
-  color: #16120d;
+  color: #211B12;
   margin: 0;
   padding: 1em;
   background: rgba(255, 255, 255, 0.8);
@@ -143,8 +147,8 @@ body {
 }
 
 h2 {
-  font-family: "Satisfy", cursive !important;
-  color: #123700;
+  font-family: "Sunflare", sans-serif !important;
+  color: #211B12;
   font-weight: 900;
   font-size: 4em;
   letter-spacing: 1px;
@@ -153,7 +157,7 @@ h2 {
 
 h3,
 h4 {
-  font-family: "Satisfy", cursive !important;
+  font-family: "Sunflare", sans-serif !important;
   font-weight: 200;
   letter-spacing: 1px;
   line-height: 1em;
@@ -174,7 +178,7 @@ h4 {
 }
 
 p {
-  font-family: "Lato", sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-size: 1.5em;
   line-height: 1.5em;
   padding: 0.5em 0;
@@ -184,14 +188,14 @@ p.uppercase {
   font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: white;
+  color: #EFE7DA;
 }
 p.uppercase-light {
   font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
   background-color: #06677d;
-  color: white;
+  color: #EFE7DA;
 }
 
 section {
@@ -220,16 +224,16 @@ section.colors > figure .swatch.accent1 {
   background-color: #06677d;
 }
 section.colors > figure .swatch.accent2 {
-  background-color: #a5cff8;
+  background-color: #07BEB8;
 }
 section.colors > figure .swatch.accent3 {
-  background-color: #c4631e;
+  background-color: #EFE7DA;
 }
 section.colors > figure .swatch.accent4 {
-  background-color: #123700;
+  background-color: #DE762B;
 }
 section.colors > figure .swatch.text-dark {
-  background-color: #16120d;
+  background-color: #211B12;
 }
 section.elements .element {
   border: 1px solid;
@@ -240,13 +244,13 @@ section.elements .element.accent1 {
   background-color: #06677d;
 }
 section.elements .element.accent1 h4 {
-  color: white;
+  color: #EFE7DA;
 }
 section.elements .element.accent3 {
-  background-color: #eeb58d;
+  background-color: hsl(37.1428571429, 39.6226415094%, 119.6078431373%);
 }
 section.elements .element.accent3 h4 {
-  color: white;
+  color: #EFE7DA;
 }
 
 @keyframes rainbow-background {
@@ -261,9 +265,10 @@ section.elements .element.accent3 h4 {
   }
 }
 h1 {
-  font-family: "Satisfy", cursive !important;
+  font-family: "Sunflare", sans-serif !important;
   background: #06677d;
-  color: white;
+  text-transform: uppercase;
+  color: #EFE7DA;
   font-weight: normal;
   font-size: 6em;
   padding: 0.5em 1em;
@@ -293,8 +298,7 @@ h1::before {
   bottom: -15px;
   border-radius: 30px;
   border: 15px solid transparent;
-  background: linear-gradient(45deg, green, yellow, blue, white);
-  /* Brazilian flag colors */
+  background: linear-gradient(45deg, #07BEB8, #EFE7DA, #DE762B);
   background-size: 400% 400%;
   z-index: -1;
   animation: rainbow-border 2s linear infinite;
@@ -357,8 +361,8 @@ nav li {
   }
 }
 nav li a {
-  font-family: "Satisfy", cursive;
-  color: white;
+  font-family: "Sunflare", sans-serif;
+  color: #EFE7DA;
   font-size: 1.2em;
   text-decoration: none;
   text-transform: uppercase;
@@ -374,18 +378,16 @@ nav li a:before {
   left: 0;
   width: 100%;
   height: 2px;
-  background: #a5cff8;
+  background: #211B12;
   transform: scaleX(0);
   transform-origin: bottom right;
   transition: transform 0.3s ease;
 }
 nav li a:hover {
-  background: linear-gradient(45deg, green, yellow, blue, white);
-  /* Brazilian flag colors */
+  background: #07BEB8;
   background-size: 400% 400%;
-  animation: rainbow-background 2s linear infinite;
-  /* Continuous rainbow background */
-  color: #d4e8fc;
+  animation: rainbow-background 2s linear infinite; /* Continuous rainbow background */
+  color: #211B12;
 }
 nav li a:hover:before {
   transform: scaleX(1);
@@ -432,8 +434,8 @@ nav li a:hover:before {
   }
 }
 #styles .features li {
-  background-color: #09361c;
-  color: white;
+  background-color: #211B12;
+  color: #EFE7DA;
   width: 200px;
   height: 120px;
   display: flex;
@@ -450,7 +452,7 @@ nav li a:hover:before {
   display: block;
 }
 #styles .features li a {
-  color: #a3e635;
+  color: #DE762B;
   text-decoration: none;
   font-weight: bold;
 }
@@ -483,7 +485,7 @@ nav li a:hover:before {
     word-wrap: break-word;
   }
   #styles .features li a {
-    color: #a3e635;
+    color: #DE762B;
     text-decoration: none;
     font-weight: bold;
     font-size: 0.9rem;
@@ -503,13 +505,13 @@ nav li a:hover:before {
   margin-bottom: 1rem;
 }
 .profile .container {
-  background-color: #09361c;
+  background-color: #211B12;
   padding: 1.5rem 3rem;
   border-radius: 8px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  color: white;
+  color: #EFE7DA;
   width: 60%;
   margin: 0 auto;
 }
@@ -536,7 +538,7 @@ nav li a:hover:before {
 .profile .profile-website {
   text-align: left;
   flex-basis: 50%;
-  border-left: 2px solid white;
+  border-left: 2px solid #EFE7DA;
   padding-left: 2rem;
 }
 .profile .view-stylesheet {
@@ -548,7 +550,7 @@ nav li a:hover:before {
   text-align: center;
 }
 .profile a {
-  color: #a3e635;
+  color: #DE762B;
   text-decoration: none;
   font-weight: bold;
 }
@@ -558,7 +560,7 @@ nav li a:hover:before {
 
 .page-footer {
   background: #06677d;
-  color: white;
+  color: #EFE7DA;
   padding: 2rem;
 }
 .page-footer .container {
@@ -592,7 +594,7 @@ nav li a:hover:before {
   bottom: 0;
   left: calc(100% + 2rem);
   width: 2px;
-  background: white;
+  background: #EFE7DA;
 }
 .page-footer li {
   display: flex;
@@ -600,20 +602,20 @@ nav li a:hover:before {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 .page-footer li:hover {
-  background: linear-gradient(45deg, green, yellow, blue, white);
+  background: linear-gradient(45deg, #07BEB8, #DE762B);
   background-size: 400% 400%;
   animation: rainbow-background 2s linear infinite;
-  color: white;
+  color: #EFE7DA;
 }
 .page-footer li::before {
   content: "•";
   margin-right: 0.5rem;
   font-size: 1rem;
-  color: white;
+  color: #EFE7DA;
   transition: color 0.3s ease-in-out;
 }
 .page-footer li:hover::before {
-  color: gold;
+  color: #07BEB8;
 }
 .page-footer .text-content {
   display: flex;
@@ -636,7 +638,7 @@ nav li a:hover:before {
 .page-footer p,
 .page-footer a,
 .page-footer li {
-  color: white !important;
+  color: #EFE7DA !important;
   font-size: 0.7rem !important;
   line-height: 1.2;
 }
@@ -646,26 +648,27 @@ nav li a:hover:before {
 
 a {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  color: #16120d;
+  color: #211B12;
   text-decoration: none;
   transition: border-color 0.2s ease-in-out;
 }
 a:hover {
-  border-color: #088fae;
+  border-color: #07BEB8;
 }
 
 svg {
   width: 50px;
   height: 50px;
-  display: none;
-  /* Hides the star */
+  display: none; /* Hides the star */
   margin: auto;
 }
 
 svg path {
-  fill: gold;
-  stroke: #09361c;
+  fill: #07BEB8;
+  stroke: #211B12;
   stroke-width: 2px;
   transform: scale(0.4);
   transform-origin: center;
 }
+
+/*# sourceMappingURL=style.css.map */

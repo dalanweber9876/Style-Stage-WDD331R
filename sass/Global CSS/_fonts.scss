@@ -1,16 +1,20 @@
-// Roboto Condensed
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+// Sunflare
+@font-face {
+  font-family: Sunflare;
+  src: url("fonts/Sunflare.ttf") format('truetype');
+  src: url("fonts/Sunflare.otf") format('opentype');
+  src: url("fonts/Sunflare.woff") format('woff');
+}
 
-// Dancing Script
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+// Quicksand
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 // Fonts
-$font-body: "Lato", sans-serif;
-$font-headlines: "Satisfy", cursive;
+$font-body: "Quicksand", sans-serif;
+$font-headlines: "Sunflare", sans-serif;
 
 h1,
 h2,
-h3,
 h3 {
   font-family: $font-headlines;
 }

@@ -1,6 +1,8 @@
+@use "../Global CSS/theme" as theme;
+
 .page-footer {
-  background: $color-accent1;
-  color: white;
+  background: theme.$color-accent1;
+  color: theme.$color-accent3;
   padding: 2rem;
 
   .container {
@@ -38,7 +40,7 @@
       bottom: 0;
       left: calc(100% + 2rem); // Position to the right of the ul
       width: 2px;
-      background: white;
+      background: theme.$color-accent3;
     }
   }
 
@@ -48,22 +50,22 @@
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 
     &:hover {
-      background: linear-gradient(45deg, green, yellow, blue, white);
+      background: linear-gradient(45deg, theme.$color-accent2, theme.$color-accent4);
       background-size: 400% 400%;
       animation: rainbow-background 2s linear infinite;
-      color: white;
+      color: theme.$color-accent3;
     }
 
     &::before {
       content: "•";
       margin-right: 0.5rem;
       font-size: 1rem;
-      color: white;
+      color: theme.$color-accent3;
       transition: color 0.3s ease-in-out;
     }
 
     &:hover::before {
-      color: gold;
+      color: theme.$color-accent2;
     }
   }
 
@@ -93,7 +95,7 @@
   p,
   a,
   li {
-    color: white !important; // Enforce white color
+    color: theme.$color-accent3 !important; // Enforce white color
     font-size: 0.7rem !important; // Make all text very small
     line-height: 1.2; // Optional: adjust line height for better readability
   }
