@@ -7,7 +7,7 @@
 }
 
 html {
-  background: url(../images/rioj.jpg) no-repeat center center fixed;
+  background: url(../public/images/rioj.jpg) no-repeat center center fixed;
   background-size: cover;
   padding: 5%;
   border: 10px solid theme.$color-accent1;
@@ -32,6 +32,26 @@ body {
   @media (max-width: 600px) {
     display: flex;
     width: 100%;
+
+    h2 {
+      font-size: 3em; 
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    ol {
+      li {
+        font-size: 15px;
+      }
+    }
+
+    #about ul {
+      li {
+        font-size: 16px !important;
+      }
+    }
   }
 
   > .container {
@@ -76,6 +96,12 @@ body {
       }
     }
   }
+
+  ol {
+    li {
+      font-size: 16px;
+    }
+  }
 }
 
 // Headings
@@ -83,7 +109,7 @@ h2 {
   font-family: fonts.$font-headlines !important;
   color: theme.$color-text-dark;
   font-weight: 900;
-  font-size: 4em;
+  font-size: 3em;
   letter-spacing: 1px;
   line-height: 1em;
 }
