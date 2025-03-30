@@ -262,7 +262,7 @@ section.elements .element.accent1 h4 {
   color: #EFE7DA;
 }
 section.elements .element.accent3 {
-  background-color: hsl(37.1428571429, 39.6226415094%, 119.6078431373%);
+  background-color: white;
 }
 section.elements .element.accent3 h4 {
   color: #EFE7DA;
@@ -404,7 +404,8 @@ nav li a:before {
 nav li a:hover {
   background: #07BEB8;
   background-size: 400% 400%;
-  animation: rainbow-background 2s linear infinite; /* Continuous rainbow background */
+  animation: rainbow-background 2s linear infinite;
+  /* Continuous rainbow background */
   color: #211B12;
 }
 nav li a:hover:before {
@@ -677,7 +678,8 @@ a:hover {
 svg {
   width: 50px;
   height: 50px;
-  display: none; /* Hides the star */
+  display: none;
+  /* Hides the star */
   margin: auto;
 }
 
@@ -688,5 +690,3 @@ svg path {
   transform: scale(0.4);
   transform-origin: center;
 }
-
-/*# sourceMappingURL=style.css.map */
